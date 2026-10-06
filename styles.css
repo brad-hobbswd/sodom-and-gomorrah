@@ -1,0 +1,518 @@
+/* =========================================================
+   SODOM AND GOMORRAH
+   Historical Research Website
+   Prepared by Bradley Hobbs
+   ========================================================= */
+
+:root {
+    --ink: #20201d;
+    --muted: #68645c;
+    --paper: #f7f3ea;
+    --paper-light: #fffdf8;
+    --line: #d8d0c1;
+    --accent: #7b2f27;
+    --accent-dark: #55211c;
+    --gold: #a47b3c;
+    --shadow: 0 12px 35px rgba(35, 28, 18, 0.10);
+    --max-width: 1180px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: Georgia, "Times New Roman", serif;
+    line-height: 1.8;
+    font-size: 18px;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    color: var(--accent);
+}
+
+a:hover {
+    color: var(--accent-dark);
+}
+
+/* =========================
+   HEADER
+   ========================= */
+
+.site-header {
+    background: #171714;
+    color: #fff;
+    border-bottom: 4px solid var(--gold);
+}
+
+.site-header-inner {
+    width: min(100% - 32px, var(--max-width));
+    margin: 0 auto;
+    padding: 18px 0;
+}
+
+.site-title {
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(1.35rem, 3vw, 2rem);
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    margin-bottom: 12px;
+}
+
+.site-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 10px;
+}
+
+.site-nav a {
+    color: #e9e4d9;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.82rem;
+    letter-spacing: 0.04em;
+    padding: 5px 7px;
+    border-radius: 4px;
+}
+
+.site-nav a:hover,
+.site-nav a.active {
+    color: #fff;
+    background: var(--accent);
+}
+
+/* =========================
+   MAIN / HERO
+   ========================= */
+
+main {
+    width: 100%;
+}
+
+.hero {
+    width: min(100%, 1920px);
+    margin: 0 auto;
+    background: #111;
+    overflow: hidden;
+}
+
+.site-banner {
+    width: 100%;
+    height: auto;
+    max-width: none;
+}
+
+/* =========================
+   INTRODUCTION
+   ========================= */
+
+.page-intro {
+    width: min(100% - 32px, 920px);
+    margin: 0 auto;
+    padding: 76px 0 42px;
+}
+
+.eyebrow {
+    margin: 0 0 12px;
+    color: var(--accent);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+}
+
+.page-intro h1 {
+    margin: 0 0 22px;
+    color: var(--accent-dark);
+    font-size: clamp(2.3rem, 6vw, 4.5rem);
+    line-height: 1.05;
+}
+
+.lead {
+    margin: 0;
+    color: #4f4a42;
+    font-size: clamp(1.15rem, 2.5vw, 1.45rem);
+    line-height: 1.75;
+}
+
+/* =========================
+   CONTENT
+   ========================= */
+
+.content-section {
+    width: min(100% - 32px, 920px);
+    margin: 0 auto;
+    padding: 0 0 72px;
+}
+
+.content-section p {
+    margin: 0 0 28px;
+}
+
+.emphasis {
+    margin: 38px 0 !important;
+    padding: 22px 28px;
+    border-left: 5px solid var(--accent);
+    background: rgba(255, 253, 248, 0.75);
+    color: var(--accent-dark);
+    font-size: 1.6rem;
+    font-weight: 700;
+    box-shadow: var(--shadow);
+}
+
+/* =========================
+   JOURNEY LIST
+   ========================= */
+
+.journey-list {
+    margin: 48px 0;
+}
+
+.journey-item {
+    display: grid;
+    grid-template-columns: 62px 1fr;
+    gap: 20px;
+    align-items: start;
+    padding: 24px 0;
+    border-top: 1px solid var(--line);
+}
+
+.journey-item:last-child {
+    border-bottom: 1px solid var(--line);
+}
+
+.journey-number {
+    color: var(--gold);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.9rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+}
+
+.journey-item p {
+    margin: 0;
+}
+
+/* =========================
+   HISTORICAL QUESTION
+   ========================= */
+
+.historical-question {
+    margin: 65px 0 0;
+    padding: 42px;
+    background: #211d18;
+    color: #f8f3e9;
+    box-shadow: var(--shadow);
+}
+
+.question-label {
+    margin: 0 0 20px !important;
+    color: #d5b474;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+}
+
+.historical-question .question {
+    margin: 22px 0 0;
+    color: #fff;
+    font-size: clamp(1.35rem, 3vw, 2rem);
+    line-height: 1.5;
+}
+
+/* =========================
+   TABLE OF CONTENTS
+   ========================= */
+
+.contents-section {
+    padding: 80px 16px 100px;
+    background: #ebe5d8;
+}
+
+.contents-section > .eyebrow,
+.contents-section > h2 {
+    width: min(100%, var(--max-width));
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contents-section h2 {
+    margin-top: 0;
+    margin-bottom: 38px;
+    color: var(--accent-dark);
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    line-height: 1.15;
+}
+
+.contents-grid {
+    width: min(100%, var(--max-width));
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.contents-card {
+    display: block;
+    padding: 30px;
+    background: var(--paper-light);
+    color: var(--ink);
+    text-decoration: none;
+    border: 1px solid var(--line);
+    box-shadow: 0 5px 18px rgba(35, 28, 18, 0.06);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.contents-card:hover {
+    color: var(--ink);
+    transform: translateY(-3px);
+    border-color: var(--gold);
+    box-shadow: var(--shadow);
+}
+
+.contents-card span {
+    display: block;
+    margin-bottom: 10px;
+    color: var(--gold);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+}
+
+.contents-card h3 {
+    margin: 0 0 12px;
+    color: var(--accent-dark);
+    font-size: 1.5rem;
+    line-height: 1.25;
+}
+
+.contents-card p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 0.98rem;
+    line-height: 1.65;
+}
+
+/* =========================
+   GENERAL RESEARCH PAGES
+   ========================= */
+
+.research-page {
+    width: min(100% - 32px, 920px);
+    margin: 0 auto;
+    padding: 70px 0 90px;
+}
+
+.research-page h1 {
+    margin: 0 0 22px;
+    color: var(--accent-dark);
+    font-size: clamp(2.2rem, 5vw, 3.8rem);
+    line-height: 1.1;
+}
+
+.research-page h2 {
+    margin: 52px 0 18px;
+    color: var(--accent-dark);
+    font-size: clamp(1.55rem, 3vw, 2.2rem);
+    line-height: 1.25;
+}
+
+.research-page h3 {
+    margin: 38px 0 14px;
+    color: var(--accent);
+    font-size: 1.35rem;
+}
+
+.research-page p {
+    margin: 0 0 24px;
+}
+
+.research-page ul,
+.research-page ol {
+    margin: 0 0 28px;
+    padding-left: 28px;
+}
+
+.research-page li {
+    margin-bottom: 10px;
+}
+
+.scripture {
+    margin: 32px 0;
+    padding: 26px 30px;
+    background: #eee8dc;
+    border-left: 4px solid var(--gold);
+}
+
+.scripture p:last-child {
+    margin-bottom: 0;
+}
+
+.note {
+    margin: 32px 0;
+    padding: 22px 26px;
+    background: #fffdf8;
+    border: 1px solid var(--line);
+}
+
+.note strong {
+    color: var(--accent-dark);
+}
+
+.research-table-wrap {
+    width: 100%;
+    overflow-x: auto;
+    margin: 32px 0;
+}
+
+.research-table {
+    width: 100%;
+    min-width: 650px;
+    border-collapse: collapse;
+    background: var(--paper-light);
+}
+
+.research-table th,
+.research-table td {
+    padding: 14px 16px;
+    border: 1px solid var(--line);
+    text-align: left;
+    vertical-align: top;
+}
+
+.research-table th {
+    background: #ded5c5;
+    color: var(--accent-dark);
+}
+
+/* =========================
+   FOOTER
+   ========================= */
+
+.site-footer {
+    padding: 46px 20px;
+    background: #171714;
+    color: #d8d2c6;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.85rem;
+    line-height: 1.7;
+}
+
+.site-footer p {
+    margin: 4px 0;
+}
+
+.site-footer strong {
+    color: #fff;
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+
+@media (max-width: 900px) {
+    .contents-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    body {
+        font-size: 17px;
+    }
+
+    .site-header-inner {
+        width: min(100% - 22px, var(--max-width));
+        padding: 14px 0;
+    }
+
+    .site-title {
+        margin-bottom: 10px;
+    }
+
+    .site-nav {
+        gap: 3px 5px;
+    }
+
+    .site-nav a {
+        font-size: 0.75rem;
+        padding: 4px 5px;
+    }
+
+    .page-intro {
+        width: min(100% - 24px, 920px);
+        padding: 52px 0 30px;
+    }
+
+    .content-section {
+        width: min(100% - 24px, 920px);
+        padding-bottom: 54px;
+    }
+
+    .journey-item {
+        grid-template-columns: 48px 1fr;
+        gap: 12px;
+        padding: 20px 0;
+    }
+
+    .historical-question {
+        padding: 28px 22px;
+        margin-top: 48px;
+    }
+
+    .contents-section {
+        padding: 58px 12px 70px;
+    }
+
+    .contents-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .contents-card {
+        padding: 24px;
+    }
+
+    .research-page {
+        width: min(100% - 24px, 920px);
+        padding: 52px 0 70px;
+    }
+
+    .scripture {
+        padding: 21px 20px;
+    }
+
+    .note {
+        padding: 19px 20px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    .contents-card {
+        transition: none;
+    }
+}
