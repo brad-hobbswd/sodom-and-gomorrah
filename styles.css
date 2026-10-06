@@ -101,27 +101,6 @@ a:hover {
     background: var(--accent);
 }
 
-.site-nav a {
-    color: #e9e4d9;
-    text-decoration: none;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 0.82rem;
-    letter-spacing: 0.04em;
-    padding: 5px 7px;
-    border-radius: 4px;
-    transition: color 0.2s ease, background-color 0.2s ease;
-}
-
-.site-nav a:hover {
-    color: #171714;
-    background: var(--gold);
-}
-
-.site-nav a.active {
-    color: #fff;
-    background: var(--accent);
-}
-
 /* =========================
    MAIN / HERO
    ========================= */
@@ -477,12 +456,23 @@ main {
     }
 
     .site-nav {
-        gap: 3px 5px;
+        gap: 4px;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        overflow-y: hidden;
+        padding-bottom: 4px;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: thin;
     }
 
     .site-nav a {
+        flex: 0 0 auto;
+        min-height: 34px;
+        display: inline-flex;
+        align-items: center;
+        white-space: nowrap;
         font-size: 0.75rem;
-        padding: 4px 5px;
+        padding: 5px 7px;
     }
 
     .page-intro {
