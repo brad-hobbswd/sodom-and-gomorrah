@@ -88,9 +88,35 @@ a:hover {
     letter-spacing: 0.04em;
     padding: 5px 7px;
     border-radius: 4px;
+    transition: color 0.2s ease, background-color 0.2s ease;
 }
 
-.site-nav a:hover,
+.site-nav a:hover {
+    color: #171714;
+    background: var(--gold);
+}
+
+.site-nav a.active {
+    color: #fff;
+    background: var(--accent);
+}
+
+.site-nav a {
+    color: #e9e4d9;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.82rem;
+    letter-spacing: 0.04em;
+    padding: 5px 7px;
+    border-radius: 4px;
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.site-nav a:hover {
+    color: #171714;
+    background: var(--gold);
+}
+
 .site-nav a.active {
     color: #fff;
     background: var(--accent);
