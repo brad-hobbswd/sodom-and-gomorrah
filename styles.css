@@ -540,3 +540,91 @@ main {
         transition: none;
     }
 }
+
+
+/* Clearer hierarchy for Part labels, chapter labels, and chapter headings. */
+.research-page > .eyebrow {
+  display: block;
+  margin: 0 0 1rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  letter-spacing: .18em;
+  color: var(--accent);
+}
+.research-page > h1 {
+  font-size: clamp(2.6rem, 6.2vw, 4.25rem);
+  line-height: 1.08;
+  margin: 0 0 1.6rem;
+}
+.research-page .chapter {
+  margin-top: 3rem;
+}
+.research-page .chapter > .eyebrow {
+  margin: 0 0 .55rem;
+  font-size: .95rem;
+  line-height: 1.5;
+  letter-spacing: .16em;
+  color: var(--accent);
+}
+.research-page .chapter > h2 {
+  margin: .35rem 0 1.1rem;
+  font-size: clamp(1.85rem, 4vw, 2.55rem);
+  line-height: 1.2;
+  color: var(--accent-dark);
+}
+.research-page .chapter > h3 {
+  font-size: clamp(1.35rem, 3vw, 1.7rem);
+  line-height: 1.3;
+}
+
+/* Scripture is presented first, then its historical or interpretive explanation. */
+.scripture-verse {
+  margin: 1.6rem 0 1.25rem;
+  padding: 1.2rem 1.4rem;
+  background: #eee8dc;
+  border-left: 4px solid var(--gold);
+  color: var(--accent-dark);
+  font-size: 1.12rem;
+  line-height: 1.8;
+}
+.scripture-verse p { margin: 0 0 .55rem; }
+.scripture-verse p:last-child { margin-bottom: 0; }
+.scripture-verse .verse-reference {
+  display: block;
+  margin-top: .65rem;
+  color: var(--accent);
+  font: 700 .82rem/1.5 Arial, Helvetica, sans-serif;
+  letter-spacing: .06em;
+}
+
+/* Turn each end-of-section continuation link into a clear action button. */
+.historical-question .question a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+  padding: .8rem 1.2rem;
+  border: 1px solid #d5b474;
+  border-radius: 4px;
+  background: #d5b474;
+  color: #211d18;
+  font: 700 1rem/1.45 Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0,0,0,.16);
+  transition: background-color .2s ease, transform .2s ease, box-shadow .2s ease;
+}
+.historical-question .question a:hover,
+.historical-question .question a:focus-visible {
+  background: #f0d79f;
+  color: #171714;
+  transform: translateY(-1px);
+  box-shadow: 0 7px 18px rgba(0,0,0,.22);
+}
+@media (max-width: 640px) {
+  .research-page > .eyebrow { font-size: .95rem; }
+  .research-page .chapter { margin-top: 2.5rem; }
+  .research-page .chapter > .eyebrow { font-size: .9rem; }
+  .research-page .chapter > h2 { font-size: clamp(1.7rem, 7vw, 2.15rem); }
+  .historical-question .question a { width: 100%; text-align: center; }
+  .scripture-verse { padding: 1rem; font-size: 1.05rem; }
+}
