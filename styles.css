@@ -628,3 +628,19 @@ main {
   .historical-question .question a { width: 100%; text-align: center; }
   .scripture-verse { padding: 1rem; font-size: 1.05rem; }
 }
+
+
+/* Label the explanation that follows each quoted biblical passage. */
+.research-page .scripture-teaching-label {
+  margin: 1.35rem 0 .65rem;
+  color: var(--gold);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .76rem;
+  font-weight: 800;
+  line-height: 1.5;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+}
+.scripture-verse + .scripture-teaching-label {
+  margin-top: 1.15rem;
+}
