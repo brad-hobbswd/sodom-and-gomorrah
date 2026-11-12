@@ -1057,3 +1057,303 @@ main {
 .footer-copyright-notice a:hover {
   text-decoration: underline;
 }
+
+
+
+/* =========================================================
+   MOBILE-FIRST OVERRIDES
+   These rules affect smaller screens only. Desktop styling
+   above remains unchanged.
+   ========================================================= */
+@media (max-width: 760px) {
+  html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: clip;
+  }
+
+  body {
+    font-size: 16px;
+    line-height: 1.72;
+  }
+
+  main, header, footer, section, article, nav, div {
+    min-width: 0;
+  }
+
+  img, video, iframe, svg {
+    max-width: 100%;
+  }
+
+  .site-header-inner {
+    width: calc(100% - 28px);
+    padding: 16px 0 14px;
+  }
+
+  .site-title {
+    display: block;
+    width: 100%;
+    margin: 0 0 13px;
+    font-size: clamp(1.35rem, 6vw, 1.8rem);
+    line-height: 1.2;
+  }
+
+  /* Keep every navigation destination visible without horizontal scrolling. */
+  .site-nav {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 5px;
+    width: 100%;
+    overflow: visible;
+    padding: 0;
+  }
+
+  .site-nav a {
+    display: flex;
+    align-items: center;
+    min-width: 0;
+    min-height: 40px;
+    padding: 7px 9px;
+    border: 1px solid rgba(213, 180, 116, .2);
+    border-radius: 4px;
+    font-size: .73rem;
+    line-height: 1.35;
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+
+  .hero {
+    width: calc(100% - 24px);
+    margin: 14px auto 0;
+  }
+
+  .site-banner {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .page-intro,
+  .content-section,
+  .research-page,
+  .contents-page,
+  .landing-intro,
+  .landing-section,
+  .landing-next {
+    width: calc(100% - 28px);
+    max-width: 100%;
+  }
+
+  .page-intro,
+  .research-page,
+  .contents-page {
+    padding-top: 42px;
+    padding-bottom: 52px;
+  }
+
+  .page-intro h1,
+  .research-page > h1,
+  .contents-page h1,
+  .landing-intro h1 {
+    font-size: clamp(2rem, 9vw, 3rem);
+    line-height: 1.12;
+    overflow-wrap: break-word;
+  }
+
+  .lead,
+  .contents-lead,
+  .landing-subtitle {
+    font-size: 1.05rem;
+    line-height: 1.65;
+  }
+
+  .research-page h2,
+  .research-page .chapter > h2,
+  .landing-section h2,
+  .landing-next h2,
+  .contents-section h2 {
+    font-size: clamp(1.45rem, 6.5vw, 2rem);
+    line-height: 1.25;
+    overflow-wrap: break-word;
+  }
+
+  .research-page h3,
+  .research-page .chapter > h3 {
+    font-size: 1.2rem;
+    line-height: 1.35;
+  }
+
+  .research-page p,
+  .content-section p,
+  .landing-section p,
+  .landing-next p {
+    overflow-wrap: break-word;
+  }
+
+  .research-page .chapter {
+    margin-top: 2.35rem;
+  }
+
+  .scripture,
+  .scripture-verse,
+  .note,
+  .emphasis,
+  .historical-question,
+  .landing-feature {
+    max-width: 100%;
+    padding: 19px 17px;
+    overflow-wrap: break-word;
+  }
+
+  .scripture-verse {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  .journey-item {
+    grid-template-columns: 38px minmax(0, 1fr);
+    gap: 10px;
+  }
+
+  .contents-section {
+    padding: 46px 12px 56px;
+  }
+
+  .contents-grid,
+  .topic-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 13px;
+  }
+
+  .contents-card,
+  .topic-card {
+    min-width: 0;
+    padding: 20px;
+  }
+
+  .landing-intro {
+    padding: 48px 0 42px;
+  }
+
+  .landing-section {
+    padding: 42px 0;
+  }
+
+  .landing-topics {
+    width: 100%;
+    padding: 44px 14px;
+  }
+
+  .landing-next {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 18px;
+    padding: 46px 0;
+  }
+
+  .landing-actions,
+  .page-navigation {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .landing-button,
+  .historical-question .question a {
+    width: 100%;
+    min-height: 48px;
+    justify-content: center;
+    text-align: center;
+    white-space: normal;
+  }
+
+  .research-table-wrap {
+    max-width: 100%;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .research-table {
+    min-width: 600px;
+  }
+
+  .footnotes {
+    padding-left: 1.35rem;
+    overflow-wrap: anywhere;
+  }
+
+  .footnotes li,
+  .bibliography-entry {
+    overflow-wrap: anywhere;
+    word-break: normal;
+  }
+
+  .site-footer {
+    padding: 2.5rem 16px 1.2rem;
+  }
+
+  .site-footer-inner {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.8rem;
+  }
+
+  .footer-navigation {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.2rem;
+  }
+
+  .footer-nav-group {
+    min-width: 0;
+  }
+
+  .footer-nav-group a {
+    overflow-wrap: anywhere;
+  }
+
+  .site-footer-bottom {
+    flex-direction: column;
+    gap: .5rem;
+    margin-top: 1.8rem;
+  }
+
+  .footer-scripture-note,
+  .footer-copyright-notice {
+    padding: 0;
+    font-size: .72rem;
+    overflow-wrap: anywhere;
+  }
+}
+
+@media (max-width: 420px) {
+  .site-nav {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .site-nav a {
+    min-height: 38px;
+    font-size: .78rem;
+  }
+
+  .site-header-inner {
+    width: calc(100% - 24px);
+  }
+
+  .page-intro,
+  .content-section,
+  .research-page,
+  .contents-page,
+  .landing-intro,
+  .landing-section,
+  .landing-next {
+    width: calc(100% - 24px);
+  }
+
+  .footer-navigation {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .emphasis {
+    font-size: 1.25rem;
+  }
+}
