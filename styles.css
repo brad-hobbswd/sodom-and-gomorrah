@@ -1460,3 +1460,45 @@ main {
     transform: translateY(-7px) rotate(-45deg);
   }
 }
+
+
+/* Keep the phone navigation compact and anchored to the menu button. */
+@media (max-width: 760px) {
+  .site-header {
+    position: relative;
+    z-index: 1000;
+  }
+  .site-header-inner {
+    position: relative;
+  }
+  .site-nav {
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 0;
+    left: auto;
+    display: none;
+    grid-column: auto;
+    grid-row: auto;
+    width: min(320px, calc(100vw - 32px));
+    max-height: min(62vh, 440px);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    margin: 0;
+    padding: 10px;
+    border: 1px solid rgba(213,180,116,.45);
+    border-radius: 7px;
+    background: #171714;
+    box-shadow: 0 12px 30px rgba(0,0,0,.38);
+    grid-template-columns: minmax(0, 1fr);
+    gap: 5px;
+  }
+  .site-nav.is-open {
+    display: grid;
+  }
+  .site-nav a {
+    display: block;
+    min-height: 40px;
+    padding: 9px 11px;
+    border-radius: 4px;
+  }
+}
