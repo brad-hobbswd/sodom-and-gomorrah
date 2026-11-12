@@ -1681,3 +1681,27 @@ main {
   .site-footer-bottom { flex-direction: column; gap: .4rem; }
   .site-footer-bottom span:last-child { text-align: left; }
 }
+
+
+/* Four-column desktop footer, including the dedicated legal navigation group. */
+@media (min-width: 901px) {
+  .site-footer-inner {
+    grid-template-columns:
+      minmax(230px, 1.2fr)
+      minmax(145px, .72fr)
+      minmax(225px, 1.12fr)
+      minmax(150px, .78fr);
+    gap: clamp(1.25rem, 2.4vw, 2.8rem);
+  }
+}
+.legal-page .legal-updated {
+  margin: 1rem 0 2rem;
+  color: var(--text-muted, #777);
+  font-size: .9rem;
+}
+.legal-page h2 {
+  margin-top: 2rem;
+}
+.legal-page a {
+  overflow-wrap: anywhere;
+}
