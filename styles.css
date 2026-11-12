@@ -1710,8 +1710,8 @@ main {
 /* About the Book — editorial cover with natural text wrapping */
 .about-book-cover {
   float: left;
-  width: min(31%, 270px);
-  margin: .35rem 2rem 1.15rem 0;
+  width: min(27%, 225px);
+  margin: .35rem 1.75rem 1.15rem 0;
   text-align: center;
 }
 .about-book-cover img {
@@ -1734,16 +1734,10 @@ main {
 .about-book-cover + p {
   display: block;
 }
-.about-book-cover + p + .chapter {
-  clear: both;
-}
 @media (max-width: 760px) {
   .about-book-cover {
     float: none;
     width: min(68%, 250px);
     margin: 1.25rem auto 1.5rem;
-  }
-  .about-book-cover + p + .chapter {
-    clear: both;
   }
 }
