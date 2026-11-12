@@ -875,3 +875,73 @@ main {
         transition: none;
     }
 }
+
+
+/* =========================
+   RESEARCH NOTES AND FOOTNOTES
+   ========================= */
+.research-notes {
+    margin: 4.5rem 0 0;
+    padding: 2.5rem 0 0;
+    border-top: 2px solid var(--gold);
+}
+.research-notes > h2 {
+    margin: .25rem 0 1.5rem;
+    color: var(--accent-dark);
+    font-size: clamp(1.7rem, 3.5vw, 2.3rem);
+}
+.research-notes > h3 {
+    margin: 2.5rem 0 1rem;
+    color: var(--accent-dark);
+    font-size: 1.45rem;
+}
+.footnote-ref {
+    display: inline-block;
+    margin-left: .08em;
+    font: 700 .72em/1 Arial, Helvetica, sans-serif;
+    vertical-align: super;
+}
+.footnote-ref a {
+    color: var(--accent);
+    text-decoration: none;
+}
+.footnote-ref a:hover,
+.footnote-ref a:focus-visible {
+    color: var(--accent-dark);
+    text-decoration: underline;
+}
+.footnotes {
+    padding-left: 2rem;
+    color: #514c44;
+    font-size: .9rem;
+    line-height: 1.7;
+}
+.footnotes li {
+    padding: 0 0 .85rem .35rem;
+    scroll-margin-top: 1.5rem;
+}
+.footnotes li a {
+    display: inline-block;
+    margin-left: .3rem;
+    color: var(--accent);
+    font-weight: 700;
+    text-decoration: none;
+}
+.bibliography-entry {
+    margin: 0 0 .85rem !important;
+    padding-left: 1.5rem;
+    text-indent: -1.5rem;
+    color: #514c44;
+    font-size: .95rem;
+    line-height: 1.7;
+}
+@media (max-width: 640px) {
+    .research-notes {
+        margin-top: 3.25rem;
+        padding-top: 2rem;
+    }
+    .footnotes {
+        padding-left: 1.55rem;
+        font-size: .88rem;
+    }
+}
