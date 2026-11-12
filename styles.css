@@ -1707,35 +1707,43 @@ main {
 }
 
 
-/* About the Book — featured cover presentation */
+/* About the Book — editorial cover with natural text wrapping */
 .about-book-cover {
-  width: min(100%, 780px);
-  margin: 2rem auto 3.25rem;
+  float: left;
+  width: min(31%, 270px);
+  margin: .35rem 2rem 1.15rem 0;
   text-align: center;
 }
 .about-book-cover img {
   display: block;
   width: 100%;
   height: auto;
-  max-height: 560px;
+  max-height: none;
   object-fit: contain;
   object-position: center;
-  margin: 0 auto;
-  border: 1px solid rgba(90, 65, 42, .2);
-  box-shadow: 0 14px 34px rgba(45, 32, 20, .16);
+  margin: 0;
+  border: 0;
+  box-shadow: none;
 }
 .about-book-cover figcaption {
-  margin-top: .85rem;
+  margin-top: .65rem;
   color: var(--text-muted, #766b5e);
-  font-size: .9rem;
-  line-height: 1.5;
+  font-size: .82rem;
+  line-height: 1.45;
+}
+.about-book-cover + p {
+  display: block;
+}
+.about-book-cover + p + .chapter {
+  clear: both;
 }
 @media (max-width: 760px) {
   .about-book-cover {
-    width: 100%;
-    margin: 1.5rem auto 2.5rem;
+    float: none;
+    width: min(68%, 250px);
+    margin: 1.25rem auto 1.5rem;
   }
-  .about-book-cover img {
-    max-height: none;
+  .about-book-cover + p + .chapter {
+    clear: both;
   }
 }
