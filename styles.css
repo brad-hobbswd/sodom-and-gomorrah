@@ -1741,3 +1741,35 @@ main {
     margin: 1.25rem auto 1.5rem;
   }
 }
+
+/* Illustrated Part One–Nine cards on the Table of Contents */
+.contents-card {
+    position: relative;
+    overflow: hidden;
+    padding: 22px;
+}
+.contents-card-banner {
+    display: block;
+    width: calc(100% + 44px);
+    max-width: none;
+    height: auto;
+    margin: -22px -22px 18px;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+}
+.contents-card .contents-card-title {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+.contents-card span {
+    margin-bottom: 9px;
+}
+
