@@ -1773,3 +1773,25 @@ main {
     margin-bottom: 9px;
 }
 
+
+
+/* Part page title banners */
+.part-page-banner {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    max-height: 330px;
+    object-fit: contain;
+    object-position: center;
+    margin: 0 0 2rem;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+}
+@media (max-width: 760px) {
+    .part-page-banner {
+        max-height: none;
+        margin-bottom: 1.5rem;
+    }
+}
