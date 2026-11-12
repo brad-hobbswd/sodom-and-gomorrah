@@ -1037,3 +1037,23 @@ main {
   .footer-navigation { grid-template-columns: 1fr; gap: 1.8rem; }
   .site-footer-bottom { flex-direction: column; gap: .45rem; margin-top: 2rem; }
 }
+
+
+/* AMPC Scripture attribution */
+.footer-scripture-note,
+.footer-copyright-notice {
+  max-width: 1100px;
+  margin: 1rem auto 0;
+  padding: 0 1.25rem;
+  color: #c8c1b2;
+  font-size: 0.78rem;
+  line-height: 1.65;
+  text-align: center;
+}
+.footer-copyright-notice a {
+  color: var(--gold, #d5b474);
+  text-decoration: none;
+}
+.footer-copyright-notice a:hover {
+  text-decoration: underline;
+}
