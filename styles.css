@@ -1357,3 +1357,26 @@ main {
     font-size: 1.25rem;
   }
 }
+
+/* TABLET PORTRAIT ONLY: landscape and desktop retain their existing layout. */
+@media (min-width: 761px) and (max-width: 1024px) and (orientation: portrait) {
+  body { font-size: 17px; }
+  .site-header-inner { width: calc(100% - 40px); padding: 17px 0; }
+  .site-title { display: block; margin-bottom: 14px; font-size: clamp(1.55rem, 4vw, 2rem); }
+  .site-nav { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; width: 100%; overflow: visible; }
+  .site-nav a { display: flex; align-items: center; min-width: 0; min-height: 42px; padding: 7px 9px; white-space: normal; overflow-wrap: anywhere; font-size: .76rem; line-height: 1.35; }
+  .hero { width: calc(100% - 40px); margin: 20px auto 0; }
+  .page-intro, .content-section, .research-page, .contents-page, .landing-intro, .landing-section, .landing-next { width: calc(100% - 64px); max-width: 920px; }
+  .page-intro, .research-page, .contents-page { padding-top: 54px; padding-bottom: 66px; }
+  .research-page > h1, .page-intro h1, .contents-page h1 { font-size: clamp(2.5rem, 5.4vw, 3.6rem); }
+  .research-page .chapter > h2, .research-page h2 { font-size: clamp(1.8rem, 3.7vw, 2.3rem); }
+  .contents-grid, .topic-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+  .contents-card, .topic-card { min-width: 0; padding: 22px; }
+  .landing-intro { padding: 58px 0; }
+  .landing-section { padding: 52px 0; }
+  .landing-topics { width: 100%; padding: 56px 32px; }
+  .landing-next { align-items: flex-start; gap: 24px; padding: 56px 0; }
+  .research-table-wrap { max-width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .site-footer-inner { grid-template-columns: minmax(0, 1fr); gap: 2rem; }
+  .footer-navigation { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2rem; }
+}
