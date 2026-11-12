@@ -1502,3 +1502,51 @@ main {
     border-radius: 4px;
   }
 }
+
+
+/* Keep footer content within the viewport at every desktop width. */
+.site-footer,
+.site-footer * {
+  box-sizing: border-box;
+}
+.site-footer-inner,
+.footer-brand,
+.footer-navigation,
+.footer-nav-group {
+  min-width: 0;
+}
+.footer-navigation {
+  grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr);
+}
+.footer-nav-group a {
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+.footer-scripture-note,
+.footer-copyright-notice {
+  width: min(100%, var(--max-width));
+  overflow-wrap: anywhere;
+  word-break: normal;
+}
+.site-footer-bottom {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: start;
+  gap: .65rem 2rem;
+}
+.site-footer-bottom span {
+  min-width: 0;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+.site-footer-bottom span:last-child {
+  text-align: right;
+}
+@media (max-width: 760px) {
+  .site-footer-bottom {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .site-footer-bottom span:last-child {
+    text-align: left;
+  }
+}
